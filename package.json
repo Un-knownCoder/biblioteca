@@ -7,7 +7,6 @@
     "dev": "nw src/",
     "build": "nwbuild --platforms win32 --buildDir build/ src/"
   },
-
   "name": "biblioteca-euganeo",
   "version": "0.2.0",
   "main": "index.js",
