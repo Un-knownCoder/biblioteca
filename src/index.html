@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Euganeo - Classi 5^AI 5^BE 5^BI</title>
+
+  <link rel="stylesheet" href="./style/login.css">
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="./style/input-side.css">
+  <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <section id="login">
+    <input type="text" placeholder="Cognome Nome" id="user-name" />
+    <div class="user-hint uh1">Username del tuo account</div>
+    <input type="password" minlength="4" maxlength="4" placeholder="0000" id="user-pass" />
+    <div class="user-hint uh2">Password del tuo account</div>
+    <br>
+    <div class="control log-btn disabled">Accedi</div>
+  </section>
+
+  <section id="controls">
+    <div class="control all tab" opens="all">Lista libri</div>
+    <div class="control free tab" opens="free">Libri liberi</div>
+    <div class="control wish tab" opens="wish">Lista dei desideri</div>
+    <br>
+    <br>
+    <br>
+    <div class="control" onclick="openInterface(0)">Aggiungi libro</div>
+    <div class="control lettura" onclick="openInterface(1)">Mia lettura</div>
+    <!-- <br>
+    <br>
+    <div class="control" onclick="openInterface(2)">Amministrazione</div> -->
+  </section>
+
+  <section id="screen">
+    <div class="book-container">
+    </div>
+  </section>
+
+  <section id="lettura" class="interface">
+    <img draggable="false" id="imgLett"
+      src="https://books.google.it/books/content?id=LXiTj_nGurgC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71egORCkjvhJLwxQp05MnZ8uXmIUtgXX2q9VTGMltKFowR80YfIrvYkOTCzIjC8lbC2y0rpr14bqEvqwregJpVUf8Y6u5vrhat0Hgv4_LXWP31ZVyZfAbwBJfQjMZXSPcC9Pwb5"
+      alt="">
+    <ul class="details">
+      <li>
+        <span>Titolo</span>
+        <div id="titLett">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, alias!</div>
+      </li>
+      <li>
+        <span>Sottotitolo</span>
+        <div id="stLett">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, alias!</div>
+      </li>
+      <li>
+        <span>Autore</span>
+        <div id="autLett">Lorem Ipsum</div>
+      </li>
+      <li>
+        <span>Pagine</span>
+        <div id="pagLett">9999</div>
+      </li>
+      <li>
+        <span>Classe</span>
+        <div id="clLett">5^BI</div>
+      </li>
+      <li>
+        <span>Descrizione</span>
+        <div id="dsLett"></div>
+      </li>
+
+    </ul>
+
+    <div class="actions">
+      <div class="button annLett">Annulla Lettura</div>
+    </div>
+  </section>
+
+  <section id="libro" class="interface">
+    <img draggable="false" id="imgLib" src="" alt="" />
+    <ul class="details">
+      <li>
+        <span>Titolo</span>
+        <div id="titLib"></div>
+      </li>
+      <li>
+        <span>Sottotitolo</span>
+        <div id="stLib"></div>
+      </li>
+      <li>
+        <span>Autore</span>
+        <div id="autLib"></div>
+      </li>
+      <li>
+        <span>Pagine</span>
+        <div id="pagLib"></div>
+      </li>
+      <li>
+        <span>Classe</span>
+        <div id="clLib"></div>
+      </li>
+      <li>
+        <span>Descrizione</span>
+        <div id="dsLib"></div>
+      </li>
+
+    </ul>
+
+    <div class="actions alib">
+      <div id="btnLib" class="button">Prendi libro</div>
+    </div>
+  </section>
+
+  <section id="input" class="interface">
+    <input type="text" minlength="10" maxlength="13" placeholder="0000000000000" id="ISBN" />
+    <div class="hint">Inserisci il codice ISBN del libro</div>
+    <br>
+    <div class="control" onclick="fetchBook()">Aggiungi</div>
+  </section>
+
+
+  <div id="log-blur"></div>
+  <div id="bg" onclick="closeInterfaces()"></div>
+  <div id="screenBG"></div>
+
+
+  <script src="./script/main.js"></script>
+
+  <!-- Questi moduli non sono presenti nella versione Open Source, fanno parte del DATABASE privato, non possono essere di dominio pubblico -->
+  <script src="./script/private/firebase-access.js"></script>
+  <script src="./script/private/login.js"></script>
+  <script src="./script/private/handler.js"></script>
+  <script src="./script/private/util.js"></script>
+</body>
+
+</html>
